@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>restaurant menu</title>
+    <link rel="icon" type="image/jpg" href="res_logo.png" class="logo">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+    <div class="container">
+        <h1>🍽️Restaurant Management System</h1>
+    <form id="foodform">
+        <div class="input-group">
+            <label>Food name:</label>
+            <input type="text" placeholder="Example: Margherita Pizza" id="foodname">
+        </div>
+        <div class="input-group">
+            <label>Set price:</label>
+            <input type="number" placeholder="Example: 250" id="price">
+        </div>
+        <div class="input-group">
+            <label>Category:</label>
+            <select id="category">
+                <option value="" selected disabled>-- Select Category --</option>
+                <option value="Fast Food">Fast Food</option>
+                <option value="Chinese">Chinese</option>
+                <option value="South Indian">South Indian</option>
+                <option value="Punjabi">Punjabi</option>
+                <option value="Dessert">Dessert</option>
+                <option value="Beverage">Beverage</option>
+            </select><br>
+        </div>
+        <div class="input-group">
+            <label>Description</label>
+            <textarea rows="5" cols="30" id="description"></textarea>
+        </div>
+        <div class="buttons">
+            <button type="submit">Add Food</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+
+    <footer>
+        <p>© 2026 Restaurant Management System</p>
+    </footer>
+    
+    </div>
+    <table id="foodtable">
+        <thead>
+            <tr>
+                <th>Food name</th>
+                <th>price</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    </div>
+<script src="app.js"></script>
+</body>
+
+</html>
