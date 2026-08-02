@@ -7,3 +7,4 @@
  -admin role
 </pre>
 <p>right now i have been working on manager side so thanks for visiting!!</p>
+<p>first manager can add the items</p>
