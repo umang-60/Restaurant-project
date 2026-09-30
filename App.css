@@ -1,0 +1,307 @@
+/* Modern Dashboard Styling Theme Rules */
+:root {
+  --primary: #2ecc71;
+  --primary-hover: #27ae60;
+  --dark: #2c3e50;
+  --light-bg: #f8f9fa;
+  --border: #e2e8f0;
+  --text-main: #334155;
+  --text-muted: #64748b;
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+  --info: #3b82f6;
+  --info-hover: #2563eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #f1f5f9;
+  color: var(--text-main);
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Header Panel Section Layouts */
+.header-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+}
+
+.header-panel .logo {
+  width: 60px;
+  height: auto;
+}
+
+.header-panel h1 {
+  font-size: 28px;
+  color: var(--dark);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Master Grid Grid System (Form on left, Menu on right) */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card Panel Containers Wrapper Layouts */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+  border: 1px solid var(--border);
+}
+
+.card h2 {
+  font-size: 20px;
+  color: var(--dark);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--light-bg);
+}
+
+/* Dynamic Interactive Form Input Group Components */
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #fff;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.15);
+}
+
+.input-group textarea {
+  resize: none;
+}
+
+/* Standard Button Components Layout Parameters */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}
+.btn-primary:hover { background: var(--primary-hover); }
+
+.btn-edit {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--info);
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.btn-edit:hover {
+  background: var(--info);
+  color: white;
+}
+
+.btn-delete {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.btn-delete:hover {
+  background: var(--danger);
+  color: white;
+}
+
+.btn-qty {
+  width: 28px;
+  height: 28px;
+  background: var(--light-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.btn-qty:hover { background: var(--border); }
+
+/* Menu Category Layout Container Structural Design Blocks */
+.category-section {
+  margin-bottom: 35px;
+}
+
+.category-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Modern Datatable Grid Formatting Styles */
+.food-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.food-table th {
+  background: var(--light-bg);
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.food-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+.food-table tr:hover td {
+  background-color: var(--light-bg);
+}
+
+.item-meta strong {
+  display: block;
+  color: var(--dark);
+  font-size: 15px;
+}
+.item-meta span {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.quantity-badge-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.qty-val {
+  font-weight: 700;
+  min-width: 16px;
+  text-align: center;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 8px;
+}
+
+/* 🧾 Modernized Receipt Component Design Frame */
+.receipt-box {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--primary);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+.receipt-table th {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 2px dashed var(--border);
+  padding-bottom: 8px;
+}
+
+.receipt-table td {
+  padding: 10px 0;
+  font-size: 14px;
+  border-bottom: 1px dashed var(--light-bg);
+}
+
+.receipt-summary-row td {
+  border: none;
+  padding: 4px 0;
+}
+
+/* Form Validation UI Highlights Rules */
+.error-text {
+  color: var(--danger);
+  font-size: 12px;
+  font-weight: 600;
+  display: block;
+  margin-top: 4px;
+}
+
+.error-input {
+  border-color: var(--danger) !important;
+  background-color: #fffafb !important;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
